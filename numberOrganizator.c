@@ -6,7 +6,7 @@
 
 int arranjo[TAM] = {0};
 
-bool arranjoVazio(void){ // função para verificar o conteúdo do array:
+bool arranjoVazio(void){ // funÃ§Ã£o para verificar o conteÃºdo do array:
 	bool arranjoVazio = false;
 
 	for(int i = 0; i < TAM; i++){
@@ -21,23 +21,23 @@ bool arranjoVazio(void){ // função para verificar o conteúdo do array:
     return arranjoVazio;
 }
 
-void imprimirMenu(void){ // função para imprimir o menu de opções:
+void imprimirMenu(void){ // funÃ§Ã£o para imprimir o menu de opÃ§Ãµes:
 	printf("\n(01) Listar todos os numeros contidos no array\n");
-    printf("(02) Listar somente os números pares\n");
-    printf("(03) Listar somente os números ímpares\n");
-    printf("(04) Listar somente os números primos\n");
-	printf("(05) Calcular e imprimir o somatório de todos os números\n");
-    printf("(06) Calcular e imprimir a média aritmética de todos os números\n");    
-	printf("(07) Imprimir a quantidade de números iguais a um dado número\n");
-    printf("(08) Imprimir a primeira ocorrência de um dado número do array\n");
-    printf("(09) Imprimir a última ocorrência de um dado número do array\n");
-    printf("(10) Imprimir o maior número contido no array\n");
-    printf("(11) Imprimir o menor número contido no array\n");
-    printf("(12) Gerar novos números para o array\n");
+    printf("(02) Listar somente os nÃºmeros pares\n");
+    printf("(03) Listar somente os nÃºmeros Ã­mpares\n");
+    printf("(04) Listar somente os nÃºmeros primos\n");
+	printf("(05) Calcular e imprimir o somatÃ³rio de todos os nÃºmeros\n");
+    printf("(06) Calcular e imprimir a mÃ©dia aritmÃ©tica de todos os nÃºmeros\n");    
+	printf("(07) Imprimir a quantidade de nÃºmeros iguais a um dado nÃºmero\n");
+    printf("(08) Imprimir a primeira ocorrÃªncia de um dado nÃºmero do array\n");
+    printf("(09) Imprimir a Ãºltima ocorrÃªncia de um dado nÃºmero do array\n");
+    printf("(10) Imprimir o maior nÃºmero contido no array\n");
+    printf("(11) Imprimir o menor nÃºmero contido no array\n");
+    printf("(12) Gerar novos nÃºmeros para o array\n");
     printf("(00) Finalizar o programa\n");
 }
 
-int escolherOpcao(void){ // função usada no case 0 e no main:
+int escolherOpcao(void){ // funÃ§Ã£o usada no case 0 e no main:
 	int caso = 0;
 
 	printf("\nQual opcao voce deseja?\n");
@@ -46,7 +46,7 @@ int escolherOpcao(void){ // função usada no case 0 e no main:
 	return caso;
 }
 
-void listarNumeros(void){ // função do case 1:
+void listarNumeros(void){ // funÃ§Ã£o do case 1:
 	bool vazio = false;
 	int indice = 0, orientacao = 0;
 
@@ -56,12 +56,12 @@ void listarNumeros(void){ // função do case 1:
         }
 	}
 	if(vazio){
-        printf("\nO arranjo está vazio, para preenche-lo digite (12)!\n\n");
+        printf("\nO arranjo estÃ¡ vazio, para preenche-lo digite (12)!\n\n");
     }
     else{
-        printf("Como você quer listar o arranjo?\n");
-        printf("(01)Com índice\n");
-        printf("(02)Sem índice\n");
+        printf("Como vocÃª quer listar o arranjo?\n");
+        printf("(01)Com Ã­ndice\n");
+        printf("(02)Sem Ã­ndice\n");
         scanf("%d", &indice);
 
         if(indice == 1){
@@ -71,12 +71,12 @@ void listarNumeros(void){ // função do case 1:
 
             if(orientacao == 1){
                 for(int i = 0; i < TAM; i++){
-                printf("Posição [%d]: %d \n", i, arranjo[i]);//vertical c/ índice
+                printf("PosiÃ§Ã£o [%d]: %d \n", i, arranjo[i]);//vertical c/ Ã­ndice
                 }
             }
             else if(orientacao == 2){
                 for(int i = 0; i < TAM; i++){
-                printf("[%d]: %d. ", i, arranjo[i]);//horizontal c/ índice
+                printf("[%d]: %d. ", i, arranjo[i]);//horizontal c/ Ã­ndice
                 }
             }
         }
@@ -87,12 +87,12 @@ void listarNumeros(void){ // função do case 1:
 
             if(orientacao == 1){
                 for(int i = 0; i < TAM; i++){
-                printf("Número: %d \n", arranjo[i]);//vertical s/ índice
+                printf("NÃºmero: %d \n", arranjo[i]);//vertical s/ Ã­ndice
                 }
             }
             else if(orientacao == 2){
                 for(int i = 0; i < TAM; i++){
-                printf("[%d] ", arranjo[i]);//horizontal s/ índice
+                printf("[%d] ", arranjo[i]);//horizontal s/ Ã­ndice
                 }
             }
         }
@@ -110,10 +110,10 @@ bool isPar(int num){ //substituir logica da 2
 	return ePar;
 }
 
-void imprimirPares(void){ // função do case 2:
+void imprimirPares(void){ // funÃ§Ã£o do case 2:
     for(int i = 0; i < TAM; i++){
         if(isPar(arranjo[i])){
-            printf("\nOs valores pares dentro do arranjo em ordem são: [%d] %d\n", i, arranjo[i]);
+            printf("\nOs valores pares dentro do arranjo em ordem sÃ£o: [%d] %d\n", i, arranjo[i]);
         }
     }
 }
@@ -128,46 +128,46 @@ bool isNotPar(int num){ //substituir logica da 3
 	return eImpar;
 }
 
-void imprimirImpares(void){ // função do case 3:
+void imprimirImpares(void){ // funÃ§Ã£o do case 3:
     for(int i = 0; i < TAM; i++){
         if(isNotPar(arranjo[i])){
-            printf("\nOs valores ímpares dentro do arranjo em ordem são: [%d] %d\n", i, arranjo[i]);
+            printf("\nOs valores Ã­mpares dentro do arranjo em ordem sÃ£o: [%d] %d\n", i, arranjo[i]);
         }
     }
 }
 
-void acharPrimos(void){ // função do case 4**:
+void acharPrimos(void){ // funÃ§Ã£o do case 4**:
     for(int i = 0; i < TAM; i++){
         int num = arranjo[i];
         bool ePrimo = true;
 
         if(num < 2){
-            ePrimo = false; // se num for menor que 2 não é primo.
+            ePrimo = false; // se num for menor que 2 nÃ£o Ã© primo.
         }
         else{
             for(int j = 2; j <= num / 2; j++){
                 if(num % j == 0){
-                    ePrimo = false; // se num for divisivel por um numero entre 2 e ele mesmo / 2, não é primo.
+                    ePrimo = false; // se num for divisivel por um numero entre 2 e ele mesmo / 2, nÃ£o Ã© primo.
                 }
             }
         }
         if(ePrimo){
-            printf("\nO número %d, que está na posição [%d] do arranjo é primo\n", num, i);
+            printf("\nO nÃºmero %d, que estÃ¡ na posiÃ§Ã£o [%d] do arranjo Ã© primo\n", num, i);
         }
     }
 }
 
-void somarValoresArranjo(void){ // função do case 5:
+void somarValoresArranjo(void){ // funÃ§Ã£o do case 5:
     int somatorio = 0;
 
     for(int i = 0; i < TAM; i++){
         somatorio += arranjo[i];
     }
-    printf("\nA soma dos valores do arranjo é: %d\n", somatorio);
+    printf("\nA soma dos valores do arranjo Ã©: %d\n", somatorio);
 
 }
 
-void calcularMediaArranjo(void){ // função do case 6:
+void calcularMediaArranjo(void){ // funÃ§Ã£o do case 6:
     int somatorio = 0;
     float media = 0;
 
@@ -176,14 +176,14 @@ void calcularMediaArranjo(void){ // função do case 6:
     }
     media = (float)somatorio / TAM;
 
-    printf("\nA média dos valores do arranjo é: %d/%d: %.2f\n", somatorio, TAM, media);
+    printf("\nA mÃ©dia dos valores do arranjo Ã©: %d/%d: %.2f\n", somatorio, TAM, media);
 
 }
 
-void contarNumerosRepetidos(void){ // função do case 7***:
+void contarNumerosRepetidos(void){ // funÃ§Ã£o do case 7***:
     int numero = 0, contador = 0;
 
-    printf("Qual valor você quer ver se repetiu?\n");
+    printf("Qual valor vocÃª quer ver se repetiu?\n");
     scanf("%d", &numero);
 
     for(int i = 0; i < TAM; i++){
@@ -191,13 +191,13 @@ void contarNumerosRepetidos(void){ // função do case 7***:
             contador++;
         }
     }
-    printf("\nNo arranjo o número %d se repete %d vezes\n", numero, contador);
+    printf("\nNo arranjo o nÃºmero %d se repete %d vezes\n", numero, contador);
 }
 
-void imprimirPrimeiraOcorrencia(void){ // função do case 8***:
+void imprimirPrimeiraOcorrencia(void){ // funÃ§Ã£o do case 8***:
     int numero = 0, primeiraPosicao = -1;
 
-    printf("Qual numero você quer ver a primeira ocorrência?\n");
+    printf("Qual numero vocÃª quer ver a primeira ocorrÃªncia?\n");
     scanf("%d", &numero);
 
     for(int i = 0; i < TAM; i++){
@@ -206,17 +206,17 @@ void imprimirPrimeiraOcorrencia(void){ // função do case 8***:
         }
     }
     if(primeiraPosicao != -1){
-        printf("O número %d, aparece pela primeira vez na posição: [%d]", numero, primeiraPosicao);
+        printf("O nÃºmero %d, aparece pela primeira vez na posiÃ§Ã£o: [%d]", numero, primeiraPosicao);
     }
     else{
-        printf("\nEsse valor não está dentro do arranjo\n");
+        printf("\nEsse valor nÃ£o estÃ¡ dentro do arranjo\n");
     }
 }
 
-void imprimirUltimaOcorrencia(void){ // função do case 9***:
+void imprimirUltimaOcorrencia(void){ // funÃ§Ã£o do case 9***:
     int numero = 0, ultimaPosicao = -1;
 
-    printf("Qual numero você quer ver a última ocorrência?\n");
+    printf("Qual numero vocÃª quer ver a Ãºltima ocorrÃªncia?\n");
     scanf("%d", &numero);
 
     for(int i = 0; i < TAM; i++){
@@ -225,34 +225,34 @@ void imprimirUltimaOcorrencia(void){ // função do case 9***:
         }
     }
     if(ultimaPosicao != -1){
-        printf("O número %d, aparece pela ultima vez na posição: [%d]", numero, ultimaPosicao);
+        printf("O nÃºmero %d, aparece pela ultima vez na posiÃ§Ã£o: [%d]", numero, ultimaPosicao);
     }
     else{
-        printf("\nEsse valor não está dentro do arranjo\n");
+        printf("\nEsse valor nÃ£o estÃ¡ dentro do arranjo\n");
     }
 }
 
-void imprimirMaiorNumero(){ // função do case 10:
+void imprimirMaiorNumero(){ // funÃ§Ã£o do case 10:
     int maiorNumero = arranjo[0];
 
     for(int i = 0; i < TAM; i++){
         if(arranjo[i] > maiorNumero)
             maiorNumero = arranjo[i];
     }
-    printf("\nO maior número do arranjo é: %d\n", maiorNumero);
+    printf("\nO maior nÃºmero do arranjo Ã©: %d\n", maiorNumero);
 }
 
-void imprimirMenorNumero(void){ // função do case 11:
+void imprimirMenorNumero(void){ // funÃ§Ã£o do case 11:
     int menorNumero = arranjo[0];
 
     for(int i = 0; i < TAM; i++){
         if(menorNumero < arranjo[i]);
         	menorNumero = arranjo[i];
     }
-    printf("\nO menor número do arranjo é: %d\n", menorNumero);
+    printf("\nO menor nÃºmero do arranjo Ã©: %d\n", menorNumero);
 }
 
-void preencherArranjo(void){ // função do case 12:
+void preencherArranjo(void){ // funÃ§Ã£o do case 12:
 	int numUm = 0, numDois = 0;
 	bool flag = false;
 
@@ -263,7 +263,7 @@ void preencherArranjo(void){ // função do case 12:
 		scanf("%d", &numDois);
 
 		if(numUm >= numDois){
-			printf("\nO primeiro valor não pode ser maior ou igual o segundo, digite de novo!\n\n\n");
+			printf("\nO primeiro valor nÃ£o pode ser maior ou igual o segundo, digite de novo!\n\n\n");
 			flag = true;
 			}
 		}while(false);
@@ -301,7 +301,7 @@ int main(void){
 				case 11: imprimirMenorNumero(); break;
 				case 12: preencherArranjo(); break;
 				case 0: printf("Programa encerrado!\n"); break;
-				default: printf("\nDigite um valor válido!\n");
+				default: printf("\nDigite um valor vÃ¡lido!\n");
 			}
 		}
 	}while(caso != 0);
